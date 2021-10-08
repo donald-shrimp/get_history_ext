@@ -2,16 +2,17 @@
   "name": "履歴取得くん",
   "version": "1.0",
   "description": "俺を信じてくれ…",
+  
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": "history.png"
+  },
   "permissions": [
     "activeTab",
     "declarativeContent",
     "storage"
   ],
  
-  "page_action": {
-    "default_popup": "popup.html",
-    "default_icon": "history.png"
-  },
   "icons": {
     "16": "history.png",
     "48": "history.png",
