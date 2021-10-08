@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <label for="stunum">学生番号：</label>
+    <input type="text" name="uid" id="stunum" size="8" placeholder="例)306000">
+    <input type="button" value="利用開始" onclick="use_start">
+    <script type="text/javascript">
+        function use_start(){
+            let uid = document.getElementById('stunum');
+            console.log(uid);
+            localStorage.uid = uid;
+        }
+    </script>
+</body>
+
 </html>

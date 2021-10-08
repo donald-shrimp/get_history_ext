@@ -1,0 +1,29 @@
+{
+  "name": "get_history_ext",
+  "version": "1.0.0",
+  "description": "これはみんなの検索履歴を手に入れるための拡張機能だよ\r 悪用しないから！信じて！！",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "react-scripts build",
+    "start": "react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donald-shrimp/get_history_ext.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donald-shrimp/get_history_ext/issues"
+  },
+  "homepage": "https://github.com/donald-shrimp/get_history_ext#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "react-scripts": "^4.0.3"
+  }
+}
