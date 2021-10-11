@@ -12,3 +12,5 @@ document.getElementById("use_start").onclick = function() {
     console.log(uid);
     localStorage.setItem('uid', uid);
 }
+
+//履歴を取得してコンソールに出す
