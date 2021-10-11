@@ -3,7 +3,7 @@
   "version": "1.0",
   "description": "俺を信じてくれ…",
   
-  "page_action": {
+  "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "history.png"
   },
