@@ -13,6 +13,3 @@ document.getElementById("use_start").onclick = function() {
     localStorage.setItem('uid', uid);
 }
 
-//履歴を取得してコンソールに出す
-
-onVisited.addListener(listener: function)
