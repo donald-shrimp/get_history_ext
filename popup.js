@@ -14,3 +14,5 @@ document.getElementById("use_start").onclick = function() {
 }
 
 //履歴を取得してコンソールに出す
+
+onVisited.addListener(listener: function)
