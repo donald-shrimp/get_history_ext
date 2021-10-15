@@ -16,10 +16,11 @@
 // });
 
 //履歴を取得してコンソールに出す
-
-function onVisited(historyItem) {
+chrome.history.onVisited.addListener((result) => {
+  const historyItem = result;
+  console.log(historyItem.title);
   console.log(historyItem.url);
   console.log(new Date(historyItem.lastVisitTime));
-}
+})
 
-browser.history.onVisited.addListener(onVisited);
+
