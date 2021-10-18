@@ -16,11 +16,34 @@
 // });
 
 //履歴を取得してコンソールに出す
+
+
 chrome.history.onVisited.addListener((result) => {
+  // var tab_title;
+  
+  // chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+  //   var tab = tabs[0];
+  //   var title = tab.title;
+  //   console.log("Title: " + title);
+  //   tab_title = title;
+    
+  // });
+
   const historyItem = result;
   console.log(historyItem.title);
   console.log(historyItem.url);
   console.log(new Date(historyItem.lastVisitTime));
+  console.log(localStorage.getItem('uid'));
+
+  const json = JSON.stringify({
+                              "title":historyItem.title,
+                              "url":historyItem.url,
+                              "date":new Date(historyItem.lastVisitTime),
+                              "uid":localStorage.getItem('uid') 
+                              });
+  
+  console.log(json)
+
 })
 
 
