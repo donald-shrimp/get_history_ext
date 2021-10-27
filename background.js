@@ -43,6 +43,13 @@ chrome.history.onVisited.addListener((result) => {
                               });
   
   console.log(json)
+  $.ajax({
+    type: "POST",
+    url: "http://localhost:8080",
+    dataType: "json",
+    contentType: "application/json",
+    data: json
+})
 
 })
 

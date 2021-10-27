@@ -12,7 +12,8 @@
     "declarativeContent",
     "storage",
     "history",
-    "tabs"
+    "tabs",
+    "http://localhost/*"
   ],
   "background": {
     "scripts": ["background.js","jquery-3.6.0.min.js"],
