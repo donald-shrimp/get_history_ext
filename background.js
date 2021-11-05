@@ -20,13 +20,13 @@
 
 chrome.history.onVisited.addListener((result) => {
   // var tab_title;
-  
+
   // chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
   //   var tab = tabs[0];
   //   var title = tab.title;
   //   console.log("Title: " + title);
   //   tab_title = title;
-    
+
   // });
 
   const historyItem = result;
@@ -36,20 +36,34 @@ chrome.history.onVisited.addListener((result) => {
   console.log(localStorage.getItem('uid'));
 
   const json = JSON.stringify({
-                              "title":historyItem.title,
-                              "url":historyItem.url,
-                              "date":new Date(historyItem.lastVisitTime),
-                              "uid":localStorage.getItem('uid') 
-                              });
-  
+    "title": historyItem.title,
+    "url": historyItem.url,
+    "date": new Date(historyItem.lastVisitTime),
+    "uid": localStorage.getItem('uid')
+  });
+
   console.log(json)
-  $.ajax({
-    type: "POST",
-    url: "http://localhost:8080",
-    dataType: "json",
-    contentType: "application/json",
-    data: json
-})
+
+  // Fetch APIでデータ送信
+  fetch('http://localhost:8080', {　 // 送信先URL
+    method: 'post', // 通信メソッド
+    header: {
+      'Content-Type': 'application/json' // JSON形式のデータのヘッダー
+    },
+    body: json // JSON形式のデータ
+  })
+    .then(response => response.text())
+    .then(data => {
+      console.log(data);
+    });
+
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "http://localhost:8080",
+  //     dataType: "json",
+  //     contentType: "application/json",
+  //     data: json
+  // })
 
 })
 
