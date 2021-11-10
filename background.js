@@ -22,7 +22,7 @@ chrome.history.onVisited.addListener((result) => {
 
   console.log(json)
 
-  fetch("http://localhost:8080", {method: 'post', headers: headers, body: json}).then((res) => {
+  fetch("http://133.43.7.172:8080", {method: 'post', headers: headers, body: json}).then((res) => {
     // レスポンスをコンソールに表示
     res.text().then(console.log)
   })
