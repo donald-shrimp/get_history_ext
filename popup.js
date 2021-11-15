@@ -12,5 +12,6 @@ document.getElementById("use_start").onclick = function() {
     console.log(uid);
     localStorage.setItem('uid', uid);
     localStorage.setItem('url', 'none');
+    localStorage.setItem('title', 'none');
 }
 
