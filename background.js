@@ -27,7 +27,6 @@ chrome.history.onVisited.addListener(async(result) => {
   
 　const title = await getTitle();
   console.log(historyItem.title);
-  console.log(title);
   console.log(historyItem.url);
   console.log(new Date(historyItem.lastVisitTime));
   console.log(localStorage.getItem('uid'));
