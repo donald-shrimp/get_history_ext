@@ -1,18 +1,4 @@
 
-function getTitle() {
-  new Promise((resolve, reject) => {
-    //ここでエラーがめっちゃ出ます！うんち！！
-    chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
-      
-      resolve(tabs[0].title);
-      
-      reject('すまんこ！(笑)');
-    });
-    
-  })
-
-}
-
 
 //履歴を取得してコンソールに出す
 chrome.history.onVisited.addListener(async(result) => {
@@ -24,8 +10,7 @@ chrome.history.onVisited.addListener(async(result) => {
   }
 
   
-  //tabの情報を取得()
-　const title = await getTitle();
+  //tabの情報を取得()　
   console.log(historyItem.title);
   console.log(historyItem.url);
   console.log(new Date(historyItem.lastVisitTime));
@@ -34,7 +19,7 @@ chrome.history.onVisited.addListener(async(result) => {
   if (localStorage.getItem('url') === historyItem.url||localStorage.getItem('title') === historyItem.title) { //localstorageに格納された値と違うURLを取得した場合のみJSON送信
     console.log("おなじだよ")
   }else if(historyItem.url===''||historyItem.url==='https://music.amazon.co.jp/'||historyItem.url==='https://www.youtube.com/'||historyItem.url==='https://www.youtube.com/?gl=JP&hl=ja'||historyItem.title==='Amazon | 本, ファッション, 家電から食品まで | アマゾン'||historyItem.url==='https://www.google.com/'||historyItem.url==='https://www.yahoo.co.jp/'||historyItem.url.indexOf('133.43.7.172') > -1){ 
-    console.log("送信しないよ")
+    console.log("除外だよ")
   }else {
     console.log("送信するよ")
     const json = JSON.stringify(
