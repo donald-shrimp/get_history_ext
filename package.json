@@ -1,6 +1,6 @@
 {
   "name": "get_history_ext",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "これはみんなの検索履歴を手に入れるための拡張機能だよ\r 悪用しないから！信じて！！",
   "main": "background.js",
   "scripts": {
