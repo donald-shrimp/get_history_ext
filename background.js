@@ -18,7 +18,7 @@ chrome.history.onVisited.addListener(async(result) => {
 
   if (localStorage.getItem('url') === historyItem.url||localStorage.getItem('title') === historyItem.title) { //localstorageに格納された値と違うURLを取得した場合のみJSON送信
     console.log("おなじだよ")
-  }else if(historyItem.url===''||historyItem.url==='https://music.amazon.co.jp/'||historyItem.url==='https://www.youtube.com/'||historyItem.url==='https://www.youtube.com/?gl=JP&hl=ja'||historyItem.title==='Amazon | 本, ファッション, 家電から食品まで | アマゾン'||historyItem.url==='https://www.google.com/'||historyItem.url==='https://www.yahoo.co.jp/'||historyItem.url.indexOf('133.43.7.172') > -1){ 
+  }else if(historyItem.url===''||historyItem.url===''||historyItem.url==='https://music.amazon.co.jp/'||historyItem.url==='https://www.youtube.com/'||historyItem.url==='https://www.youtube.com/?gl=JP&hl=ja'||historyItem.title==='Amazon | 本, ファッション, 家電から食品まで | アマゾン'||historyItem.url==='https://www.google.com/'||historyItem.url==='https://www.yahoo.co.jp/'||historyItem.url.indexOf('133.43.7.172') > -1||historyItem.url.indexOf('https://portal.upex.ce.nihon-u.ac.jp') > -1||historyItem.url.indexOf('localhost') > -1){ 
     console.log("除外だよ")
   }else {
     console.log("送信するよ")
