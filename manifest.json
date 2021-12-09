@@ -1,6 +1,6 @@
 {
-  "name": "履歴取得くん",
-  "version": "1.0.2",
+  "name": "YouTube履歴取得くん",
+  "version": "1.0.0",
   "description": "俺を信じてくれ…",
   
   "browser_action": {
