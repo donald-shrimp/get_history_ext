@@ -1,5 +1,5 @@
 console.log("うんち");
-alert("登録完了！適当な場所をクリックするとポップアップは消えます")
+
 
 //idが登録されていた場合は入力バーに入れておく
 let defaultid = localStorage.getItem('uid');
@@ -14,5 +14,6 @@ document.getElementById("use_start").onclick = function() {
     localStorage.setItem('uid', uid);
     localStorage.setItem('url', 'none');
     localStorage.setItem('title', 'none');
+    alert("登録完了！適当な場所をクリックするとポップアップは消えます")
 }
 
