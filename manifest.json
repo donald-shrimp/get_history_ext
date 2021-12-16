@@ -14,7 +14,8 @@
     "history",
     "tabs",
     "http://localhost/*",
-    "http://133.43.7.172/*"
+    "http://133.43.7.172/*",
+    "http://netlab.ce.nihon-u.ac.jp/*"
   ],
   "background": {
     "scripts": ["background.js","jquery-3.6.0.min.js"],

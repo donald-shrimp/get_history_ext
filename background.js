@@ -33,7 +33,7 @@ chrome.history.onVisited.addListener(async(result) => {
 
     console.log(json)
 
-    fetch("http://133.43.7.172:8080", { method: 'post', headers: headers, body: json }).then((res) => {
+    fetch("http://netlab.ce.nihon-u.ac.jp:8181", { method: 'post', headers: headers, body: json }).then((res) => {
       // レスポンスをコンソールに表示
       res.text().then(console.log)
     })
